@@ -4,9 +4,9 @@ LRT=-lrt
 all: bin
 
 clean:
-	rm -f bin/server.o bin/client.o
+	rm -f run/server.o test/client.o
 
 
 bin: src/server.c src/client.c src/mylib.h
-	gcc $(CFLAGS) src/server.c $(LIBS) -o bin/server.o $(LRT)
-	gcc $(CFLAGS) src/client.c $(LIBS) -o bin/client.o $(LRT)
+	gcc $(CFLAGS) src/server.c $(LIBS) -o run/server.o $(LRT)
+	gcc $(CFLAGS) src/client.c $(LIBS) -o test/client.o $(LRT)
